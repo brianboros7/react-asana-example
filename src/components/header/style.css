@@ -1,0 +1,7 @@
+.app-header-btns {
+    width: 95%; 
+}
+.app-header h1 {
+    width: 100%; 
+    flex-wrap: nowrap; 
+}

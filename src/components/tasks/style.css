@@ -1,0 +1,10 @@
+.task-item-container {
+    border: 1px solid black; 
+}
+.task-item {
+    padding: 3px;  
+}
+.task-item p {
+    color: black; 
+    padding: 1px; 
+}
