@@ -8,7 +8,7 @@ function TaskCompleted(props) {
 
     // eslint-disable-next-line
     const handleChange = ((id) => {
-        // Update State so that the item with the given id flips 'completed' from false to true 
+        // Update the task State so that the TaskItem with the given ID marked 'completed' == boolean from false to true 
         // Remember not to modify prevState directly 
         // BUT instead, return a new version of state with the changes
         setTask((prevState) => {

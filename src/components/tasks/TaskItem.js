@@ -1,5 +1,6 @@
 import React from 'react';
 import './style.css'
+// eslint-disable-next-line
 import TaskCompleted from './TaskCompleted'
 
 function TaskItem(props) {
