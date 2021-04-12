@@ -1,11 +1,11 @@
 import React from 'react'
-import TodaysTasksHeader from './TodaysTasksHeader'
+import TodaysTasksArrowIcon from '../../../../icons/TodaysTasksArrowIcon'
 
-function TodaysTasks() {
+function TodaysTasks(props) {
 
     return(
         <div> 
-            <TodaysTasksHeader /> 
+            <p className="inline-block"><TodaysTasksArrowIcon /> <span>Today's Tasks</span></p>  
         </div>
     )
 }

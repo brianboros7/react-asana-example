@@ -1,12 +1,16 @@
 import React from 'react'
-import TodaysTasks from './todays-tasks/TodaysTasks'
-import RecentProjects from './recent-projects/RecentProjects'
+import TodaysTasksHeader from './todays-tasks/TodaysTasksHeader'
+import RecentProjectsHeader from './recent-projects/RecentProjectsHeader'
+import TaskItem from '../../tasks/TaskItem'
 
 function HubSection() {
+
     return(
         <div>
-            <TodaysTasks />
-            <RecentProjects /> 
+            <TodaysTasksHeader  />
+            <RecentProjectsHeader /> 
+
+            <TaskItem /> 
         </div>
     )
 }
