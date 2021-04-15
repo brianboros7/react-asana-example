@@ -6,6 +6,29 @@ import TasksItem from './Tasks'
 function TaskList() {
     const [tasks, setTasks] = useState(taskData) 
 
+    function addTask() {
+        setTasks(tasks => {
+            // return task array with an extra object at the end
+            return [
+                ...tasks,
+                {
+                    id: Date.now(), 
+                    text: "",
+                    completed: false 
+                } 
+            ] 
+        })
+    }
+
+    function removeTask(id) {
+        setTasks(tasks =>  ( 
+            tasks.filter(task => ( 
+                task.id !== id
+            ))
+        ))
+    }
+
+
     function toggleCompleted(id) {
         setTasks(prevState => {
             const updatedTasks = prevState.map(task => {
@@ -22,11 +45,17 @@ function TaskList() {
         })
     }
 
+
     return(
         <div>
             {tasks.map(task => (
-                <TasksItem task={task} toggleCompleted={toggleCompleted} /> 
+                <TasksItem task={task} toggleCompleted={toggleCompleted} removeTask={removeTask} /> 
             ))}
+
+            <button
+                onClick={addTask}> 
+                Add new task
+            </button>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React from 'react'
+import { IoTrashOutline } from 'react-icons/io5'
 
-function TasksItem({task, toggleCompleted}) {
+function TasksItem({task, toggleCompleted, removeTask}) {
 
     function handleChange() {
         toggleCompleted(task.id) 
@@ -18,6 +19,8 @@ function TasksItem({task, toggleCompleted}) {
                     onChange={handleChange}
                 /> 
             </button>
+            <IoTrashOutline onClick={() => removeTask(task.id)}/> 
+
             <div classNam="task-item-cell">
                 <label className="task-item-label">
                     <div className="task-item-box">
