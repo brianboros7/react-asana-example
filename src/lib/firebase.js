@@ -1,13 +1,13 @@
 // Firebase config
 
 const firebaseConfig = {
-    apiKey: API_KEY,
+    apiKey: REACT_APP_API_KEY,
     authDomain: "react-asana-example.firebaseapp.com",
     projectId: "react-asana-example",
     storageBucket: "react-asana-example.appspot.com",
-    messagingSenderId: SENDER_ID,
-    appId: APP_ID,
-    measurementId: MEASUREMENT_ID
+    messagingSenderId: REACT_APP_SENDER_ID,
+    appId: REACT_APP_APP_ID,
+    measurementId: REACT_APP_MEASUREMENT_ID
 };
 
 const firebase = window.firebase.initializeApp(config);
