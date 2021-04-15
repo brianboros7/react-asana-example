@@ -1,39 +1,54 @@
-import React from 'react';
-import './style.css'
-// eslint-disable-next-line
-import TaskCompleted from './TaskCompleted'
+import React, {useState} from 'react';
+import taskData from './taskData'
 
 function TaskItem(props) {
-    // Set an array that will hold the todo list items
-    let todoItems = [];
+    const [task, setTask] = useState(false)
 
-    // This function will create a new todo object based on the
-    // text that was entered in the text input, and push it into
-    // the `todoItems` array
-    function addTodo(text) {
-        const todo = {
-          text,
-          checked: false,
-          id: Date.now(),
-        };
-      
-        todoItems.push(todo);
-        console.log(todoItems);
-      }
-    }
+    // Set an array that will hold the todo list items
+    let taskItem = []
+    taskItem = taskData.map(item => {
+        return(
+            <div key={item.id}>
+                <button>
+                    <input 
+                        type="checkbox" 
+                        checked={props.item.completed} 
+                        onChange={() => handleChange(item.id)}
+                    /> 
+                </button>
+                <div>
+                    <p>{item.text}</p>
+                </div>  
+            </div>
+        )
+    })
+
+  
+
+    // eslint-disable-next-line
+    const handleChange = ((id) => {
+    // Update the task State so that the TaskItem with the given ID marked 'completed' == boolean from false to true 
+    // Remember not to modify prevState directly 
+    // BUT instead, return a new version of state with the changes
+        setTask((prevState) => {
+            const updatedTask = prevState.task.map(task => { 
+                if (task.id === id) { 
+                    return {  
+                        ...task,
+                        completed: !task.completed 
+                    }
+                }
+                return task 
+            })
+
+            setTask(updatedTask) 
+        })
+        addTask(task)
+    })
 
     return(
         <div className="task-item-container">
-            <div className="task-item">
-                <button>
-                    <input type="checkbox" 
-                        checked={props.item.completed} 
-                        onChange={() => props.handleChange(props.item.id)}
-                    /> 
-                </button>
-                <p>{props.item.text}</p>
-
-            </div>
+            {taskItem}          
         </div> 
     )
 }

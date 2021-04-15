@@ -1,10 +1,16 @@
-.task-item-container {
-    border: 1px solid black; 
+.task-item-cell {
+    border: .5px solid black; 
+    display: flex; 
+    padding: 1px;
+    background: gray; 
+    color: black;  
 }
-.task-item {
-    padding: 3px;  
-}
-.task-item p {
-    color: black; 
+
+.task-item-box {
     padding: 1px; 
+}
+.task-item-textarea {
+    width: inherit; 
+    height: 2px; 
+    max-height: 2px; 
 }

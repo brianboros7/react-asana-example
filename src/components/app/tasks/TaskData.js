@@ -1,4 +1,4 @@
-const TaskData = [
+const taskData = [
     {
         id: 1, 
         text: "Take out the trash", 
@@ -26,4 +26,4 @@ const TaskData = [
     }
 ];
 
-export default TaskData; 
+export default taskData; 
