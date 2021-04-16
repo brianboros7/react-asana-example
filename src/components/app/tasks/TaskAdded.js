@@ -2,13 +2,9 @@ import React from 'react'
 
 function TaskAdded(task) {
 
-    function addTask(id) {
-        setTask(task => {
-            if (task.id === task) {
-                task.push([]) 
-            }
-        })
-    }
+    function addTask(id) 
+        
+    
 
     return(
         <div>
