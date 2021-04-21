@@ -1,7 +1,7 @@
 import React from 'react'
 import { RiArrowRightSFill } from 'react-icons/ri'
 
-export default function RecentProjectsArrowIcon(props) {
+export default function RecentProjectsArrowIcon() {
 
     return(
         <button>

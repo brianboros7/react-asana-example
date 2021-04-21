@@ -1,6 +1,6 @@
 import React from 'react'
 // import HubList from './HubList'
-import RecentProjectsArrowIcon from '../../../../icons/RecentProjectsArrowIcon'
+import RecentProjectsArrowIcon from '../icons/RecentProjectsArrowIcon'
 
 function RecentProjects() {
 

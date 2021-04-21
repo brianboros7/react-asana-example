@@ -1,15 +1,13 @@
 import React from 'react'
-import TodaysTasks from './TodaysTasks'
+import TodaysTasksArrowIcon from '../icons/TodaysTasksArrowIcon'
 
-function TodaysTasksHeader() {
+function TodaysTasks() {
 
     return(
-
-        <div className="HubSection-header d-flex justify-content-between pt-3 p-2 pl-2"> 
-            <TodaysTasks className="HomeTasksForToday align-items-center px-2">
-                
-            </TodaysTasks>
-                    
+        <div className="d-flex justify-content-between"> 
+            <div className="justify-content-start p-1">
+                <p className="inline-block"><TodaysTasksArrowIcon /> <span>Today's Tasks</span></p> 
+            </div>
             <div className="d-flex justify-content-end p-1">
                 <div className="align-items-center px-2">
                     <p>Icon</p>
@@ -18,10 +16,9 @@ function TodaysTasksHeader() {
                 <div className="align-items-end pl-2">
                     <a>see all my tasks</a>
                 </div>
-            </div>
-        
+            </div> 
         </div>
     )
 }
 
-export default TodaysTasksHeader 
+export default TodaysTasks 

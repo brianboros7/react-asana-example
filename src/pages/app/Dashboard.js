@@ -3,7 +3,7 @@ import './style.css'
 import { Container, Row, Col } from 'react-bootstrap'
 // import TaskItem from '../../components/tasks/TaskCompleted' 
 import AppHeader from '../../components/header/AppHeader'
-import HubSection from '../../components/app/dashboard/hub-section/HubSection'
+import HubSection from '../../components/hub-section/HubSection'
 
 function Dashboard() {
 
