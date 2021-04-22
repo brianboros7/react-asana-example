@@ -1,24 +1,12 @@
 import React from 'react'
 
-function SignUp() {
+function Login() {
 
     return(
         <div>
-            <h1>Let's sign you up</h1>
+            <h3>Let's log you in </h3>
 
             <form method="POST">
-                <input 
-                    aria-label="Enter your first name"
-                    placebolder="First Name"
-                    type="text" 
-                    name="name" 
-                />
-                <input 
-                    aria-label="Enter your last name"
-                    placeholder="Last Name"
-                    type="text" 
-                    name="name" 
-                />
                 <input 
                     aria-label="Enter your email"
                     placeholder="Email"
@@ -38,11 +26,11 @@ function SignUp() {
                     type="submit" 
                     value="Submit"
                     >
-                    Sign Up 
+                    Log In
                 </button> 
             </form>
         </div>
     )
 }
 
-export default SignUp  
+export default Login 

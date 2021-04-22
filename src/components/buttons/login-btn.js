@@ -5,9 +5,14 @@ import {Link} from 'react-router-dom'
 function LogInBtn() {
 
     return(
-        <Link to="/dashboard"> 
-            <Button variant="light">Login</Button>
-        </Link> 
+        <div> 
+            <Link to={ROUTES.DASHBOARD}> 
+                <Button 
+                    variant="light">
+                    Login
+                </Button>
+            </Link> 
+        </div> 
     )
 }
 
